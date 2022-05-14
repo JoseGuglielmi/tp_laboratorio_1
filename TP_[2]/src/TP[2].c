@@ -8,11 +8,11 @@
 
 int main()
 {
-	setbuf(stdout,NULL);
     Passenger list[LEN];
     Passenger auxList;
     int exit = 1;
     int id = 1;
+    int position;
     int addP = 0;
     int dato;
 
@@ -26,9 +26,9 @@ int main()
             case 1:
                 if (addPassenger(list, LEN, auxList.id, auxList.name, auxList.lastName, auxList.price, auxList.typePassenger, auxList.statusFlight, auxList.flycode, &id))
                 {
-                    printf("\nAlta Exitosa \n");
+                    printf("\nAlta Exitosa\n");
                     addP++;
-                     system("pause");
+                    system("pause");
                 }
                 else
                 {
@@ -84,7 +84,6 @@ int main()
                 break;
             case 4:
                 system("cls");
-                //agregar if
                 passengerInfo(list, LEN, addP);
                 printf("\n");
                 system("pause");
@@ -98,7 +97,6 @@ int main()
                 else
                 {
                     printf("Alta exitosa\n");
-                    addP = 14;
                     system("pause");
                 }
                 break;

@@ -18,7 +18,7 @@ int menu()
 
 int initPassengers(Passenger *list, int len)
 {
-    int todoOk = 0;
+    int todoOk = -1;
 
     if (list != NULL && len >= 0)
     {
@@ -70,7 +70,7 @@ int addPassenger(Passenger *list, int len, int id, char name[], char lastName[],
             requestDataTex("Ingrese su nombre: ", "Error. Ingrese un nombre valido: ", name, 51);
             ordenarStrings(list[index].name);
 
-            requestDataTex("Ingrese su Apellido: ", "Error. Ingrese un Apellido valido: ", lastName, 51);
+            requestDataTex("Ingrese su Apellido:  ", "Error. Ingrese un Apellido valido: ", lastName, 51);
             ordenarStrings(list[index].lastName);
 
             requestDataNumFloat("Ingrese Precio del vuelo: ", "Error. ReIngrese el precio: ", &price, 0, 100000000);
@@ -584,11 +584,13 @@ int hardcodearPasseger(Passenger *list, int len, int *id, int cantidad, int *add
 
     for (int i = 0; i < cantidad; i++)
     {
+        if(list[i].isEmpty == 0){
         list[i] = auxLista[i];
         list[i].id = *id;
         *id = *id + 1;
         todoOk = 1;
         *addP = *addP + 1;
+        }
     }
 
     return todoOk;
