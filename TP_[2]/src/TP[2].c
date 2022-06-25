@@ -20,7 +20,7 @@ int main()
     {
         do
         {
-            system("cls");
+
             switch (menu())
             {
             case 1:
@@ -54,7 +54,7 @@ int main()
                 }
                 break;
             case 3:
-                system("cls");
+
                 if (addP != 0)
                 {
                     dato = removePassenger(list, LEN);
@@ -83,7 +83,7 @@ int main()
 
                 break;
             case 4:
-                system("cls");
+
                 passengerInfo(list, LEN, addP);
                 printf("\n");
                 system("pause");

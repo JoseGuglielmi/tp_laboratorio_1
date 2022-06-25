@@ -190,7 +190,6 @@ int printPassengers(Passenger *list, int len)
 int menuMod(Passenger *list)
 {
     int opcion;
-    system("cls");
     printf("                                            *** MENU de modificacion ***\n\n");
 
     printf(" ID  Nombre               Apellido             Codigo de vuelo   Tipo de pasajero   Estado del vuelo   Precio\n");
@@ -216,7 +215,6 @@ int modifyPassenger(Passenger *list, int len, int addP)
     int index;
     int exit = 0;
 
-    system("cls");
 
     if (addP != 0)
     {
@@ -293,7 +291,6 @@ int removePassenger(Passenger *list, int len)
 
     if (!printPassengers(list, len))
     {
-        system("cls");
         printf("Hubo un error al mostrar los pasajeros\n");
     }
     else
@@ -311,7 +308,6 @@ int removePassenger(Passenger *list, int len)
                 index = findPassengerById(list, len, id);
                 todoOk = 1;
             }
-            system("cls");
             printPassenger(list + index);
             requestDataNumInt("Desea eliminarlo? 1 para si 2 para no: ", "Error. Desea eliminarlo? 1 para si 2 para no: ", &a, 1, 2);
             if (a == 1)
@@ -351,7 +347,6 @@ int menuInfo()
 {
     int opcion;
 
-    system("cls");
     printf("                        *** MENU DE INFORMACION ***\n\n");
 
     printf("1-Ordenados alfabeticamente por Apellido y Tipo de pasajero.\n");
@@ -420,7 +415,7 @@ int totalAndAveragePass(Passenger *list, int len)
     float average = 0;
     int passengerAverage = 0;
     int passengerCounter = 0;
-    system("cls");
+
     printf("*Precios*\n");
     for (int i = 0; i <= len; i++)
     {
