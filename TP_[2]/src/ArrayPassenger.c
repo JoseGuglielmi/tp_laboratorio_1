@@ -66,7 +66,7 @@ int addPassenger(Passenger *list, int len, int id, char name[], char lastName[],
         }
         else
         {
-            system("cls");
+
             requestDataTex("Ingrese su nombre: ", "Error. Ingrese un nombre valido: ", name, 51);
             ordenarStrings(list[index].name);
 
@@ -220,7 +220,7 @@ int modifyPassenger(Passenger *list, int len, int addP)
     {
         if (!printPassengers(list, len))
         {
-            system("cls");
+
             printf("Hubo un error al mostrar los pasajeros\n");
         }
         else

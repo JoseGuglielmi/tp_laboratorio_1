@@ -34,7 +34,7 @@ int main()
                 {
                     printf("Error al dar de alta\n");
                 }
-                system("cls");
+
 
                 break;
             case 2:
@@ -42,7 +42,7 @@ int main()
                 {
                     if (!modifyPassenger(list, LEN, addP))
                     {
-                        system("cls");
+
                         printf("Error al mostrar el menu de modificacion, Ingrese pasajeros\n");
                         system("pause");
                     }
