@@ -8,11 +8,11 @@
 
 int main()
 {
+	setbuf(stdout, NULL);
     Passenger list[LEN];
     Passenger auxList;
     int exit = 1;
     int id = 1;
-    int position;
     int addP = 0;
     int dato;
 
